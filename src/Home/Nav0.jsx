@@ -24,7 +24,7 @@ class Header extends React.Component {
     const { dataSource, isMobile, ...props } = this.props;
     const { phoneOpen } = this.state;
     const navData = dataSource.Menu.children;
-    const navChildren = navData.map((item) => {
+    const navChildren = navData.map(item => {
       const { children: a, subItem, ...itemProps } = item;
       if (subItem) {
         return (
@@ -85,7 +85,9 @@ class Header extends React.Component {
             animation={{ x: -30, type: 'from', ease: 'easeOutQuad' }}
             {...dataSource.logo}
           >
-            <img width="100%" src={dataSource.logo.children} alt="img" />
+            <a href={dataSource.logo.href}>
+              <img width="100%" src={dataSource.logo.children} alt="img" />
+            </a>
           </TweenOne>
           {isMobile && (
             <div
@@ -106,7 +108,7 @@ class Header extends React.Component {
                 ? {
                     height: 0,
                     duration: 300,
-                    onComplete: (e) => {
+                    onComplete: e => {
                       if (this.state.phoneOpen) {
                         e.target.style.height = 'auto';
                       }

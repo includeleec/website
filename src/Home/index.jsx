@@ -21,7 +21,7 @@ import {
 import './less/antMotionStyle.less';
 
 let isMobile;
-enquireScreen((b) => {
+enquireScreen(b => {
   isMobile = b;
 });
 
@@ -38,7 +38,7 @@ export default class Home extends React.Component {
 
   componentDidMount() {
     // 适配手机屏幕;
-    enquireScreen((b) => {
+    enquireScreen(b => {
       this.setState({ isMobile: !!b });
     });
     // dva 2.0 样式在组件渲染之后动态加载，导致滚动组件不生效；线上不影响；
@@ -68,24 +68,28 @@ export default class Home extends React.Component {
         dataSource={Banner01DataSource}
         isMobile={this.state.isMobile}
       />,
-      <Content0
-        id="Content0_0"
-        key="Content0_0"
-        dataSource={Content00DataSource}
-        isMobile={this.state.isMobile}
-      />,
+      // 共建节点
       <Content5
-        id="Content5_0"
+        id="node"
         key="Content5_0"
         dataSource={Content50DataSource}
         isMobile={this.state.isMobile}
       />,
-      <Content3
-        id="Content3_0"
-        key="Content3_0"
-        dataSource={Content30DataSource}
+
+      // 节点优势
+      <Content0
+        id="advantage"
+        key="Content0_0"
+        dataSource={Content00DataSource}
         isMobile={this.state.isMobile}
       />,
+
+      // <Content3
+      //   id="Content3_0"
+      //   key="Content3_0"
+      //   dataSource={Content30DataSource}
+      //   isMobile={this.state.isMobile}
+      // />,
       <Footer1
         id="Footer1_0"
         key="Footer1_0"
@@ -96,7 +100,7 @@ export default class Home extends React.Component {
     return (
       <div
         className="templates-wrapper"
-        ref={(d) => {
+        ref={d => {
           this.dom = d;
         }}
       >

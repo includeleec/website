@@ -5,16 +5,21 @@ import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import { getChildrenToRender } from './utils';
 
 class Content5 extends React.PureComponent {
-  getChildrenToRender = (data) =>
-    data.map((item) => {
+  getChildrenToRender = data =>
+    data.map(item => {
       return (
         <Col key={item.name} {...item}>
-          <div {...item.children.wrapper}>
-            <span {...item.children.img}>
-              <img src={item.children.img.children} height="100%" alt="img" />
-            </span>
-            <p {...item.children.content}>{item.children.content.children}</p>
-          </div>
+          <a href="#">
+            <div {...item.children.wrapper}>
+              <span {...item.children.img}>
+                <img src={item.children.img.children} height="100%" alt="img" />
+              </span>
+              <p {...item.children.content}>
+                <b>{item.children.content.title}</b>
+              </p>
+              <p>{item.children.content.children}</p>
+            </div>
+          </a>
         </Col>
       );
     });
@@ -25,7 +30,7 @@ class Content5 extends React.PureComponent {
     delete props.dataSource;
     delete props.isMobile;
     const childrenToRender = this.getChildrenToRender(
-      dataSource.block.children
+      dataSource.block.children,
     );
     return (
       <div {...props} {...dataSource.wrapper}>

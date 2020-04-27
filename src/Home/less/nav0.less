@@ -38,6 +38,14 @@
       a {
         display: block;
       }
+
+      &.ant-menu-dark {
+        background: transparent;
+      }
+
+      .ant-menu-item-selected {
+        background: @nav-bg-color;
+      }
     }
   }
 
@@ -45,7 +53,7 @@
     &-block {
       padding: 0 8px;
 
-      >* {
+      > * {
         display: inline-block;
       }
     }
@@ -54,11 +62,15 @@
   &-item,
   &-item-child,
   &-menu {
-
     .ant-menu-sub .ant-menu-item,
     .ant-menu-inline .ant-menu-item {
       height: auto;
       line-height: 1.5;
+    }
+
+    .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal)
+      .ant-menu-item-selected {
+      background: @nav-bg-color;
     }
 
     .item {
@@ -105,9 +117,9 @@
       float: inherit;
       position: relative;
       left: -24px;
-      width: ~"calc(100% + 48px)";
+      width: ~'calc(100% + 48px)';
       opacity: 0;
-      transition: opacity .3s @ease-in-out;
+      transition: opacity 0.3s @ease-in-out;
 
       & li {
         padding: 0 24px;
@@ -138,7 +150,7 @@
         height: 2px;
         background: #fff;
         margin-top: 4px;
-        transition: transform .3s @ease-in-out, opacity .3s @ease-in-out;
+        transition: transform 0.3s @ease-in-out, opacity 0.3s @ease-in-out;
       }
 
       :first-child {
@@ -174,7 +186,7 @@
         }
       }
 
-      >.@{header0}-menu {
+      > .@{header0}-menu {
         opacity: 1;
         pointer-events: auto;
       }
