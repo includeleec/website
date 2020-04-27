@@ -1,8 +1,8 @@
 .footer1-wrapper {
-  background: @template-bg-color;
+  background: @nav-bg-color;
   overflow: hidden;
   position: relative;
-  min-height: 360px;
+  min-height: 300px;
   color: @template-footer-text-color;
   .footer1 {
     .home-page {
@@ -32,7 +32,7 @@
       float: left;
       clear: both;
       &:hover {
-        color: @primary-color;
+        color: #ccc;
       }
     }
 
@@ -59,6 +59,11 @@
       height: 80px;
       text-align: center;
       line-height: 80px;
+
+      a {
+        color: #ccc !important;
+        font-weight: 500;
+      }
     }
   }
 }
@@ -113,11 +118,6 @@
 
       span {
         width: 90%;
-      }
-
-      a {
-        color: #ccc !important;
-        font-weight: 500;
       }
     }
   }
