@@ -68,19 +68,18 @@ export default class Home extends React.Component {
         dataSource={Banner01DataSource}
         isMobile={this.state.isMobile}
       />,
-      // 共建节点
-      <Content5
-        id="node"
-        key="Content5_0"
-        dataSource={Content50DataSource}
-        isMobile={this.state.isMobile}
-      />,
-
       // 节点优势
       <Content0
         id="advantage"
         key="Content0_0"
         dataSource={Content00DataSource}
+        isMobile={this.state.isMobile}
+      />,
+      // 共建节点
+      <Content5
+        id="node"
+        key="Content5_0"
+        dataSource={Content50DataSource}
         isMobile={this.state.isMobile}
       />,
 
