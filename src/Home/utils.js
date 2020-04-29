@@ -1,11 +1,16 @@
 import React from 'react';
-import { Button } from 'antd';
+import { Button, Popover } from 'antd';
 import {
   WechatOutlined,
   TwitterOutlined,
   WeiboCircleOutlined,
   GithubOutlined,
+  createFromIconfontCN,
 } from '@ant-design/icons';
+
+const IconFont = createFromIconfontCN({
+  scriptUrl: '//at.alicdn.com/t/font_1786450_uian27ff93.js',
+});
 
 export const isImg = /^http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w-./?%&=]*)?/;
 
@@ -37,6 +42,25 @@ export const getChildrenToRender = (item, i) => {
 
     if (item.children.type === 'github') {
       children = <GithubOutlined />;
+    }
+
+    if (item.children.type === 'telegram') {
+      children = <IconFont type="icon-telegram" />;
+    }
+
+    if (item.children.type === 'weixin') {
+      tag = 'div';
+      const p_content = (
+        <div>
+          <img src={item.img} />
+        </div>
+      );
+
+      children = (
+        <Popover content={p_content}>
+          <IconFont type="icon-wechat-" />
+        </Popover>
+      );
     }
   }
 

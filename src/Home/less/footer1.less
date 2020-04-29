@@ -4,57 +4,75 @@
   position: relative;
   min-height: 300px;
   color: @template-footer-text-color;
+
   .footer1 {
     .home-page {
       padding: 64px 24px 80px;
     }
   }
+
   .block {
     padding: 0 32px;
+
     .logo {
       max-width: 180px;
+
       img {
         width: 120px;
         margin-bottom: 10px;
       }
     }
+
     .slogan {
       font-size: 12px;
       margin-top: -20px;
     }
-    > h2 {
+
+    >h2 {
       margin-bottom: 24px;
       color: @template-text-color;
     }
+
     a {
       color: @template-footer-text-color;
       margin-bottom: 12px;
       float: left;
       clear: both;
+
       &:hover {
         color: #ccc;
       }
     }
 
     .contact {
-      display: inline;
+      display: flex;
 
-      a {
-        float: none;
-        margin-right: 10px;
-        span {
-          font-size: 20px;
-        }
+      &>div {
+        margin-right: 12px;
       }
+
+      &>a {
+        margin-right: 12px;
+      }
+
+      // icon
+      span {
+        font-size: 22px;
+      }
+
+
     }
   }
+
   .copyright-wrapper {
     width: 100%;
     border-top: 1px solid fade(@line-color, 10);
+
     .home-page {
       padding: 0 24px;
       overflow: hidden;
     }
+
     .copyright {
       height: 80px;
       text-align: center;
@@ -71,6 +89,7 @@
 @media screen and (max-width: 767px) {
   .footer1 {
     min-height: 550px;
+
     &-wrapper {
       .footer1 {
         .home-page {
@@ -78,38 +97,46 @@
         }
       }
     }
+
     .logo {
       margin: 0 auto 24px;
     }
+
     .block {
       text-align: center;
       margin-bottom: 32px;
       padding: 0;
 
-      & > div {
+      &>div {
         display: flex;
         justify-content: center;
       }
     }
-    > ul {
+
+    >ul {
       width: 90%;
       margin: 20px auto 0;
       padding: 10px 0;
-      > li {
+
+      >li {
         width: 100%;
+
         h2 {
           margin-bottom: 10px;
         }
+
         li {
           display: inline-block;
           margin-right: 10px;
         }
       }
     }
+
     .copyright {
       &-wrapper {
         .home-page {
           padding: 0;
+
           .copyright {
             font-size: 12px;
           }

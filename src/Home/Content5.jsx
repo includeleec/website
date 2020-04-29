@@ -9,7 +9,7 @@ class Content5 extends React.PureComponent {
     data.map(item => {
       return (
         <Col key={item.name} {...item}>
-          <a href="#">
+          <a target="__blank" href={item.children.content.href}>
             <div {...item.children.wrapper}>
               <span {...item.children.img}>
                 <img src={item.children.img.children} height="100%" alt="img" />

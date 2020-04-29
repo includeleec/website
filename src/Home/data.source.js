@@ -173,6 +173,7 @@ export const Content50DataSource = {
             children: 'https://s1.ax1x.com/2020/04/27/JhDFZn.png',
           },
           content: {
+            href: 'https://node.nebulas.io/detail/naxone01',
             title: 'NAX.ONE #1 - 巨人',
             children:
               '共识挖矿分红: 88%, 分红根据投票地址投票数进行权重加成后按比例分配. 1000~10w 权重1, 10w~50w 权重1.1,50w~100w 权重1.2,100w以上权重1.3 ',
@@ -190,6 +191,7 @@ export const Content50DataSource = {
             children: 'https://s1.ax1x.com/2020/04/27/JhDFZn.png',
           },
           content: {
+            href: 'https://node.nebulas.io/detail/naxone02',
             title: 'NAX.ONE #2 - 挑战者',
             children: '共识挖矿分红: 83%, 分红根据投票地址投票数按比例分配',
           },
@@ -406,21 +408,36 @@ export const Footer10DataSource = {
           className: 'contact',
           children: [
             {
-              href: '#',
+              img: 'https://s1.ax1x.com/2020/04/29/JHVpk9.th.jpg',
+              name: 'icon',
+              children: {
+                type: 'weixin',
+              },
+            },
+            {
+              href: 'https://www.weibo.com/u/7440511426',
               name: 'icon',
               children: {
                 type: 'weibo',
               },
             },
+
             {
-              href: '#',
+              href: 'https://twitter.com/Naxone1',
               name: 'icon',
               children: {
                 type: 'twitter',
               },
             },
             {
-              href: 'https://github.com/nax-one#',
+              href: 'https://t.me/naxone',
+              name: 'icon',
+              children: {
+                type: 'telegram',
+              },
+            },
+            {
+              href: 'https://github.com/nax-one',
               name: 'icon',
               children: {
                 type: 'github',
